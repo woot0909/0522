@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var hEl;
+        function nowClock(){
+            hEl = document.getElementById("clock");
+            // setInterval(printClock(), 1000);
+            // 익명함수일때만 1초 간격으로 호출됨
+            // setInterval(function (){
+            //         var now = new Date();
+            //         hEl.innerHTML = now.toString(); 
+            //     }, 1000);
+
+            setInterval(printClock, 1000);    
+        }
+
+        function printClock(){
+            var now = new Date();
+            hEl.innerHTML = now.toString(); 
+        }
+    </script>
+</head>
+<body onload="nowClock()">
+    <h1 id="clock"></h1>
+</body>
+</html>
