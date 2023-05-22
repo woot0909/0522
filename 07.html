@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function btnEvent(){
+            var btnChange = document.getElementById("btnChange");
+            var btnOrigin = document.getElementById("btnOrigin");
+
+            btnChange.onclick = changeBG;
+            btnOrigin.onclick = changeOrigin;
+        }
+        
+        function changeBG(){
+            document.body.style.background = "yellow";
+        }
+
+        function changeOrigin(){
+            document.body.style.background = "white";
+        }
+    </script>
+</head>
+<body onload="btnEvent()">
+    <button id="btnChange">배경색 변경</button>
+    <button id="btnOrigin">배경색 원래대로</button>
+</body>
+</html>
